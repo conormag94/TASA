@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7239c46ddb6ab469994291c9603c01, type: 3}
+  m_Name: CityMergedBuildingsStack
+  m_EditorClassIdentifier: 
+  MeshModifiers:
+  - {fileID: 11400000, guid: e4e0dbe376cd945fe94a1bbddf3f2c1b, type: 2}
+  - {fileID: 11400000, guid: d6fb293ba497844a7bb7e5fc483915be, type: 2}
+  - {fileID: 11400000, guid: 6bd503f909d9748a0b4a7918184bee9d, type: 2}
+  - {fileID: 11400000, guid: 5e8482c7517084951b8529ba32686fb3, type: 2}
+  GoModifiers:
+  - {fileID: 11400000, guid: 5f610bb20c1614b85a2090bf8bd9bb33, type: 2}
