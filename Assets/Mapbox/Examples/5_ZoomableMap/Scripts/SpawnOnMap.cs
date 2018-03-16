@@ -48,6 +48,7 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location);
+				Debug.Log (spawnedObject.transform.localPosition);
 			}
 		}
 	}
