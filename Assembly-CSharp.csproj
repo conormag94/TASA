@@ -277,6 +277,8 @@
      <Compile Include="Assets\Mapbox\Unity\Utilities\TelemetryConfigurationButton.cs" />
      <Compile Include="Assets\Mapbox\Unity\Utilities\VectorEntity.cs" />
      <Compile Include="Assets\Mapbox\Unity\Utilities\VectorExtensions.cs" />
+     <Compile Include="Assets\StravaScripts\DrawLine.cs" />
+     <Compile Include="Assets\StravaScripts\Movebike.cs" />
      <Compile Include="Assets\StravaScripts\StravaClient.cs" />
      <Compile Include="Assets\StravaScripts\StravaSpheres.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />

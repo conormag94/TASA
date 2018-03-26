@@ -1,0 +1,4 @@
+#Mon Mar 26 15:44:43 IST 2018
+base.0=/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

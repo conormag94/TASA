@@ -31,12 +31,9 @@
 
 		void Start()
 		{
-			string url = "http://127.0.0.1:8010/stream";
-			string activity_stream = Get(url);
-			Debug.Log (activity_stream);
-			//		LatLng latlng = LatLng.CreateFromJSON (activity_stream);
-			var locations = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<double>>>(activity_stream);
-			Debug.Log (locations[0][0]);
+			string locations_str = GetStravaCoords();
+			var locations = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<double>>> (locations_str);
+			Debug.Log (locations [0] [0]);
 
 			_locations = new Vector2d[numberStravaCoords];
 			_spawnedObjects = new List<GameObject>();
@@ -47,6 +44,7 @@
 				_locations[i] = Conversions.StringToLatLon(locationString);
 				var instance = Instantiate(_markerPrefab);
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i]);
+				Debug.Log (instance.transform.localPosition);
 				instance.transform.localScale = Vector3.one * _spawnScale;
 				_spawnedObjects.Add(instance);
 			}
@@ -60,8 +58,17 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location);
-				Debug.Log (spawnedObject.transform.localPosition);
+//				Debug.Log (spawnedObject.transform.localPosition);
 			}
+		}
+
+		public string GetStravaCoords()
+		{
+			string url = "http://127.0.0.1:8010/stream";
+			string activity_stream = Get (url);
+			Debug.Log (activity_stream);
+			//		LatLng latlng = LatLng.CreateFromJSON (activity_stream);
+			return activity_stream;
 		}
 
 		public string Get(string uri)

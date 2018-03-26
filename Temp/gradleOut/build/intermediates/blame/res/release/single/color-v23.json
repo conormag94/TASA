@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_default.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/color-v23/abc_tint_switch_thumb.xml"
+    }
+]

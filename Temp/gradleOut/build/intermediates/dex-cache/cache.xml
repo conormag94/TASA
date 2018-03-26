@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/612267aee38652d996cf07c4de2396eb34abb8d4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_2bc70e71c4f566cbee8421fedad07ba7f854d210.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/6ecd23b551e209671a4a89676de6ee908dec9f39/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_9c67b5e02be67db30e8cb337e8f2fd82c6b16a5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/College/AR/TASA/Temp/gradleOut/libs/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/okio-1.13.0_2a49b4ab9b814e1453e9d090dfb38c4de080e385.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_c5d70b27467f23ec01ceafa412bc3dbf40b52065.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/c83499754e258c236ccafc2a7bd5793ba21dec68/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_93abe9f68999099890bcfbac1e0e282809c38f0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/College/AR/TASA/Temp/gradleOut/libs/unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2d302418aa3482b8db770278260340aed47dd37a">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/unity-classes_129858b9200227159512175149528adcbbec3297.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/c0acbee721e337bd6733d625fa8b576438fbcfae/output/jars/libs/VuforiaUnityPlayer.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1e5c98f1d2f1973f9a08b7849f319bcb135fe8c3">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/VuforiaUnityPlayer_c28b258da26138d37012c5fbdd334f7c8f5826e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/d688316d816b7acd18bf326a08a1f98ffb931f51/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_1a707d7213ad99af37090b6f1b661a3004a61f72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/c0acbee721e337bd6733d625fa8b576438fbcfae/output/jars/libs/Vuforia.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6051ae41196664b2d1144cd0f1e5626d09390520">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/Vuforia_9446b90dd1f7d261a4314496c8535e7b416b4a40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/College/AR/TASA/Temp/gradleOut/libs/okhttp-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/okhttp-3.8.0_dcc270efc61ac5d8fc11431397f2569173f0f1d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/c0acbee721e337bd6733d625fa8b576438fbcfae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e29373b760f2999cd878625efe4641edd156a3d0">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_31c6f6539d18c1d1e4204ed8565ae2066e5ea227.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/0e7062b94760e0fcf6142d5ae79b57d65cb31e37/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_f578f40445469e4d7a58abea27572445c8942ceb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/05abaa40c9f29da06f697400ab2327e689657f3f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0837fa2b478de89f0955fe1df02c3282c221e25f">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_e18792baa3529af06a1015275fdb82beec91e0b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/26c3e7d5852960d168dde64f3dc6b29e2b91d723/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_98d5be0400da638a2d019ab2dd31c40b970fd78e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Darragh/.android/build-cache/cb37d8c752b4d8f098ce1209471761db211aff64/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/pre-dexed/release/classes_7195605f949ac2e165ca27c0124fdbe2b193eb20.jar" />
+    </item>
+
+</items>

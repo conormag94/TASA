@@ -1,19 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StravaSpheres.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StravaScripts/Movebike.cs">
     <Files>
-      <File FileName="Assets/StravaSpheres.cs" Line="38" Column="1" />
+      <File FileName="Assets/StravaScripts/DrawLine.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/5_ZoomableMap/Scripts/SpawnOnMap.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ImmediatePositionWithLocationProvider.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ReverseGeocodeUserInput.cs" Line="1" Column="1" />
-      <File FileName="Assets/StravaClient.cs" Line="1" Column="1" />
+      <File FileName="Assets/StravaScripts/Movebike.cs" Line="70" Column="33" />
+      <File FileName="Assets/StravaScripts/StravaClient.cs" Line="1" Column="1" />
+      <File FileName="Assets/StravaScripts/StravaSpheres.cs" Line="25" Column="3" />
+      <File FileName="Assets/Mapbox/Unity/Editor/StyleSearchWindow.cs" Line="30" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Darragh/College/AR/TASA/Assets/Mapbox/Examples/5_ZoomableMap/Scripts/SpawnOnMap.cs" line="30" column="1" />
-      <Breakpoint file="/Users/Darragh/College/AR/TASA/Assets/Mapbox/Examples/5_ZoomableMap/Scripts/SpawnOnMap.cs" line="45" column="1" />
       <Breakpoint file="/Users/Darragh/College/AR/TASA/Assets/StravaSpheres.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

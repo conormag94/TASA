@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_media_action.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/Darragh/College/AR/TASA/Temp/gradleOut/build/intermediates/res/merged/release/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/Darragh/.android/build-cache/08bcf3e4a73d2ba07550e85ac52bfa77800d82b1/output/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]
