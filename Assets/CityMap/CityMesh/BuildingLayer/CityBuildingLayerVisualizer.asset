@@ -15,7 +15,7 @@ MonoBehaviour:
   _classificationKey: 
   _key: building
   Filters: []
-  _defaultStack: {fileID: 0}
+  _defaultStack: {fileID: 11400000, guid: e3481ef0edaf546fe9709e51f9583912, type: 2}
   Stacks: []
   _enableCoroutines: 0
   _entityPerCoroutine: 20
