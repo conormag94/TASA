@@ -23,6 +23,7 @@ public class MapController : MonoBehaviour {
 	void Start () {
 		targetRotation = transform.rotation;
 		AddListOfMaps ();
+		_map.Initialize (mapCoordinates [currentMapIndex], mapZoomLevels [currentMapIndex]);
 	}
 
 	// Update is called once per frame
@@ -32,7 +33,7 @@ public class MapController : MonoBehaviour {
 
 	private void AddListOfMaps () {
 		// San Fran (initial map)
-		mapCoordinates.Add(new Vector2d(37.792159, -122.401723));
+		mapCoordinates.Add(new Vector2d(53.3441655,-6.2532845));
 		mapZoomLevels.Add (16);
 
 		// The alps

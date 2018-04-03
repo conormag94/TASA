@@ -61,7 +61,7 @@
 			int count = _spawnedObjects.Count;
 
 			if (counter < (float)numberStravaCoords) {
-				counter += .1f;// / renderSpeed;
+				counter += .2f;// / renderSpeed;
 				Debug.Log (counter);
 			}
 
@@ -69,7 +69,10 @@
 			{
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
-				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location);
+				var pointPosition = _map.GeoToWorldPosition(location);
+				pointPosition.y += _map.WorldRelativeScale;
+				spawnedObject.transform.localPosition = pointPosition;
+//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);
 			}
 
@@ -78,6 +81,7 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);			
 			}
 
@@ -85,7 +89,7 @@
 
 		public string GetStravaCoords()
 		{
-			string url = "http://127.0.0.1:8010/stream";
+			string url = "http://50882947.ngrok.io/stream";
 			string activity_stream = Get (url);
 			Debug.Log (activity_stream);
 			return activity_stream;
