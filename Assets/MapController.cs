@@ -32,8 +32,8 @@ public class MapController : MonoBehaviour {
 
 	private void AddListOfMaps () {
 		// San Fran (initial map)
-		mapCoordinates.Add(new Vector2d(37.792159, -122.401723));
-		mapZoomLevels.Add (16);
+		mapCoordinates.Add(new Vector2d(53.3441655, -6.2532845));
+		mapZoomLevels.Add (12);
 
 		// The alps
 		mapCoordinates.Add (new Vector2d (45.0079330, 6.1464520));
