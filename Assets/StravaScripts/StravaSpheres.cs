@@ -25,6 +25,9 @@
 		[SerializeField]
 		GameObject _markerPrefab;
 
+		[SerializeField]
+		private float rayOriginHeight = 100f;
+
 		int numberStravaCoords = 134;
 
 		List<GameObject> _spawnedObjects;
@@ -72,6 +75,7 @@
 				var pointPosition = _map.GeoToWorldPosition(location);
 				pointPosition.y += _map.WorldRelativeScale;
 				spawnedObject.transform.localPosition = pointPosition;
+				PerformSnap (spawnedObject);
 //				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);
 			}
@@ -87,9 +91,35 @@
 
 		}
 
+		public void PerformSnap(GameObject spawnedObject)
+		{
+			Vector3 rayOrigin = new Vector3 (
+				spawnedObject.transform.position.x, 
+				rayOriginHeight, 
+				spawnedObject.transform.position.z);
+
+			Vector3 rayDirection = Vector3.down * rayOriginHeight * 2;
+			Ray ray = new Ray (rayOrigin, rayDirection);
+
+			RaycastHit[] hitPointList = Physics.RaycastAll(ray);
+			Debug.DrawRay(ray.origin, ray.direction * rayOriginHeight * 2, Color.red);
+
+			if (hitPointList.Length > 0) {
+				// Get the raycast hit point
+				Vector3 hitPoint = hitPointList [0].point + new Vector3 (0, 0, 0);
+
+				// Apply elevation
+				spawnedObject.transform.position = new Vector3 (
+					spawnedObject.transform.position.x, 
+					hitPoint.y, 
+					spawnedObject.transform.position.z);
+			}
+
+		}
+
 		public string GetStravaCoords()
 		{
-			string url = "http://50882947.ngrok.io/stream";
+			string url = "http://127.0.0.1:8010/stream";
 			string activity_stream = Get (url);
 			Debug.Log (activity_stream);
 			return activity_stream;
