@@ -64,8 +64,8 @@
 			int count = _spawnedObjects.Count;
 
 			if (counter < (float)numberStravaCoords) {
-				counter += .2f;// / renderSpeed;
-				Debug.Log (counter);
+				counter += 1f;// / renderSpeed;
+//				Debug.Log (counter);
 			}
 
 			for (int i = 0; Convert.ToSingle(i) < counter; i++)
@@ -73,10 +73,13 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				var pointPosition = _map.GeoToWorldPosition(location);
-				pointPosition.y += _map.WorldRelativeScale;
+//				Debug.Log (_map.WorldRelativeScale);
+//				pointPosition.y = pointPosition.y * _map.WorldRelativeScale;
 				spawnedObject.transform.localPosition = pointPosition;
-				PerformSnap (spawnedObject);
-				spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
+
+				Debug.Log (spawnedObject.transform.localPosition.y);
+//				PerformSnap (spawnedObject);
+//				spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
 //				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);
 			}
