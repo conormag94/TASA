@@ -38,7 +38,7 @@ public class MapController : MonoBehaviour {
 
 		// The alps
 		mapCoordinates.Add (new Vector2d (45.0079330, 6.1464520));
-		mapZoomLevels.Add (12);
+		mapZoomLevels.Add (13);
 
 		// Yosemite
 		mapCoordinates.Add(new Vector2d (37.7384597,-119.592332));

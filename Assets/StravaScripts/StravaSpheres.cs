@@ -117,9 +117,24 @@
 				// Apply elevation
 				spawnedObject.transform.position = newPos;
 
-				Debug.DrawLine(newPos, new Vector3(newPos.x, newPos.y + 0.05f, newPos.z), Color.cyan);
+//				Debug.DrawLine(newPos, new Vector3(newPos.x, newPos.y + 0.05f, newPos.z), Color.cyan);
+				DrawLine(new Vector3(newPos.x, newPos.y + 0.04f, newPos.z), newPos, Color.cyan);
 			}
 
+		}
+
+		private void DrawLine(Vector3 start, Vector3 end, Color color, float duration = 0.1f)
+		{
+			GameObject myLine = new GameObject();
+			myLine.transform.position = start;
+			myLine.AddComponent<LineRenderer>();
+			LineRenderer lr = myLine.GetComponent<LineRenderer>();
+			lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+			lr.SetColors(color, color);
+			lr.SetWidth(0.005f, 0.005f);
+			lr.SetPosition(0, start);
+			lr.SetPosition(1, end);
+			GameObject.Destroy(myLine, duration);
 		}
 
 		public string GetStravaCoords()
