@@ -25,6 +25,9 @@
 		[SerializeField]
 		GameObject _markerPrefab;
 
+		[SerializeField]
+		private float rayOriginHeight = 0.01f;
+
 		int numberStravaCoords = 134;
 
 		List<GameObject> _spawnedObjects;
@@ -61,7 +64,7 @@
 			int count = _spawnedObjects.Count;
 
 			if (counter < (float)numberStravaCoords) {
-				counter += .1f;// / renderSpeed;
+				counter += .2f;// / renderSpeed;
 				Debug.Log (counter);
 			}
 
@@ -69,7 +72,12 @@
 			{
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
-				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location);
+				var pointPosition = _map.GeoToWorldPosition(location);
+				pointPosition.y += _map.WorldRelativeScale;
+				spawnedObject.transform.localPosition = pointPosition;
+				PerformSnap (spawnedObject);
+				spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
+//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);
 			}
 
@@ -78,7 +86,38 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
 				positions[i] = _map.GeoToWorldPosition(location);			
+			}
+
+		}
+
+		public void PerformSnap(GameObject spawnedObject)
+		{
+			Vector3 rayOrigin = new Vector3 (
+				spawnedObject.transform.position.x, 
+				rayOriginHeight, 
+				spawnedObject.transform.position.z);
+
+			Vector3 rayDirection = Vector3.down * rayOriginHeight * 2;
+			Ray ray = new Ray (rayOrigin, rayDirection);
+
+			RaycastHit[] hitPointList = Physics.RaycastAll(ray);
+//			Debug.DrawRay(ray.origin, ray.direction * rayOriginHeight * 2, Color.red);
+
+			if (hitPointList.Length > 0) {
+				// Get the raycast hit point
+				Vector3 hitPoint = hitPointList [0].point + new Vector3 (0, 0, 0);
+
+				Vector3 newPos = new Vector3 (
+					spawnedObject.transform.position.x, 
+					hitPoint.y, 
+					spawnedObject.transform.position.z);
+
+				// Apply elevation
+				spawnedObject.transform.position = newPos;
+
+				Debug.DrawLine(newPos, new Vector3(newPos.x, newPos.y + 0.05f, newPos.z), Color.cyan);
 			}
 
 		}

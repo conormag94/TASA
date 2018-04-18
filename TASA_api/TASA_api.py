@@ -4,9 +4,9 @@ import json
 
 app = Flask(__name__)
 client = Client()
-# client.access_token = "d7c39d6933831f833e61b52632e13bd7fd710de1" #d107
+client.access_token = "d7c39d6933831f833e61b52632e13bd7fd710de1" #d107
 
-client.access_token = "55d1f207d59c98d061a2016ed77225d9ebb9a2f4" #dmc77
+# client.access_token = "55d1f207d59c98d061a2016ed77225d9ebb9a2f4" #dmc77
 
 
 # client.access_token = "bf356fe1baf6b9dde0d49fa70e7f84d2a647fdff" # yas
@@ -23,13 +23,13 @@ def get_athlete():
 
 @app.route('/activity')
 def get_activity():
-    activity = client.get_activity(tim_activity_id)
+    activity = client.get_activity(activity_id)
     print(activity)
     return "ok"
 
 @app.route('/stream')
 def get_stream():
-    streams = client.get_activity_streams(tim_activity_id, types=types, resolution='medium')
+    streams = client.get_activity_streams(activity_id, types=types, resolution='medium')
     print(streams)
     # latlng = []
     if 'latlng' in streams.keys():
@@ -40,7 +40,7 @@ def get_stream():
 
 @app.route('/altitude')
 def get_altitude():
-    streams = client.get_activity_streams(tim_activity_id, types=types, resolution='medium')
+    streams = client.get_activity_streams(activity_id, types=types, resolution='medium')
     print(streams)
     if 'altitude' in streams.keys():
         altitudes = streams['altitude'].data
