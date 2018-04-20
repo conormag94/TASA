@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MapVisualiser.unity
     guid: eeabf9ef173a643f196d1db8507367e3
+  - enabled: 1
+    path: Assets/MapVisualiser_.unity
+    guid: 2326e663f11eb40489de8ec238894014

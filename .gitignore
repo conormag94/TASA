@@ -5,6 +5,8 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+/TASA_api/config.py
+
 **/venv/
 
 # Visual Studio cache directory
