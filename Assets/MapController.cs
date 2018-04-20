@@ -44,6 +44,10 @@ public class MapController : MonoBehaviour {
 		mapCoordinates.Add (new Vector2d (45.0079330, 6.1464520));
 		mapZoomLevels.Add (13);
 
+		//yasirs bike route
+		mapCoordinates.Add (new Vector2d (53.365106, -6.337232));
+		mapZoomLevels.Add (13);
+
 		// Yosemite
 		mapCoordinates.Add(new Vector2d (37.7384597,-119.592332));
 		mapZoomLevels.Add (12);
@@ -67,6 +71,9 @@ public class MapController : MonoBehaviour {
 		else if (currentMapIndex == 1) {
 			stravaSpheres.swapRoute("tim", "1467628154", 993);
 		}
+		else if (currentMapIndex == 2) {
+			stravaSpheres.swapRoute("yas", "1440429292", 867);
+		}
 	}
 
 	public void PreviousMap () {
@@ -77,6 +84,10 @@ public class MapController : MonoBehaviour {
 		}
 		else if (currentMapIndex == 1) {
 			stravaSpheres.swapRoute("tim", "1467628154", 993);
+		}
+
+		else if (currentMapIndex == 2) {
+			stravaSpheres.swapRoute("yas", "1440429292", 867);
 		}
 	}
 }

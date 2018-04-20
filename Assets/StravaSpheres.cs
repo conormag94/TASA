@@ -35,6 +35,10 @@ public class StravaSpheres : MonoBehaviour
 
 	public float renderSpeed = .2f;
 
+	private Boolean drawSpheres = false;
+
+	public Vector3[] positions;
+
 	void Start()
 	{
 		string locations_str = GetStravaCoords("darragh", "1437408506");
@@ -43,24 +47,30 @@ public class StravaSpheres : MonoBehaviour
 
 		_locations = new Vector2d[numberStravaCoords];
 		_spawnedObjects = new List<GameObject>();
+		positions = new Vector3[numberStravaCoords];
 
 		for (int i = 0; i < numberStravaCoords; i++)
 		{
 			var locationString = "" + locations[i][0] + ", " + locations[i][1];
 			_locations[i] = Conversions.StringToLatLon(locationString);
-			var instance = Instantiate(_markerPrefab);
-			instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i]);
-			Debug.Log (instance.transform.localPosition);
-			instance.transform.localScale = Vector3.one * _spawnScale;
-			_spawnedObjects.Add(instance);
+			Vector3 worldPosition = _map.GeoToWorldPosition(_locations[i]);
+
+			if (drawSpheres == true) {
+				var instance = Instantiate (_markerPrefab);
+				instance.transform.localPosition = worldPosition;
+				Debug.Log (instance.transform.localPosition);
+				instance.transform.localScale = Vector3.one * _spawnScale;
+				_spawnedObjects.Add (instance);
+			} else {
+				positions [i] = worldPosition;
+			}
 		}
 	}
 		
 	private void Update()
 	{
-		Vector3[] positions = new Vector3[numberStravaCoords];
 
-		int count = _spawnedObjects.Count;
+//		int count = _spawnedObjects.Count;
 
 		if (counter < (float)numberStravaCoords) {
 			counter += renderSpeed;
@@ -69,34 +79,39 @@ public class StravaSpheres : MonoBehaviour
 
 		for (int i = 0; Convert.ToSingle(i) < counter; i++)
 		{
-			var spawnedObject = _spawnedObjects[i];
-			var location = _locations[i];
-			var pointPosition = _map.GeoToWorldPosition(location);
-			pointPosition.y += _map.WorldRelativeScale;
-			spawnedObject.transform.localPosition = pointPosition;
-			PerformSnap (spawnedObject);
-			spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
+			var location = _locations [i];
+			if (drawSpheres) {
+				var spawnedObject = _spawnedObjects [i];
+				var pointPosition = _map.GeoToWorldPosition (location);
+				pointPosition.y += _map.WorldRelativeScale;
+				spawnedObject.transform.localPosition = pointPosition;
+			} else {
+				positions[i] = _map.GeoToWorldPosition (location);
+				PerformSnap (positions[i]);
+			}
+//			PerformSnap (spawnedObject);
+//			spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
 //				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
-			positions[i] = _map.GeoToWorldPosition(location);
 		}
 
 		for (int i = (int)counter; i < numberStravaCoords; i++)
 		{
-			var spawnedObject = _spawnedObjects[i];
-			var location = _locations[i];
-			spawnedObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;
-			positions[i] = _map.GeoToWorldPosition(location);			
+			if(drawSpheres){
+				var spawnedObject = _spawnedObjects[i];
+				var location = _locations[i];
+				spawnedObject.transform.localPosition = new Vector3(10.0f, 10.0f, 10.0f);
+//				spawnedObject.transform.localScale = Vector3.one * _spawnScale;		
+			}
 		}
 
 	}
 
-	public void PerformSnap(GameObject spawnedObject)
+	public void PerformSnap(Vector3 routePostion)
 	{
 		Vector3 rayOrigin = new Vector3 (
-			spawnedObject.transform.position.x, 
+			routePostion.x, 
 			rayOriginHeight, 
-			spawnedObject.transform.position.z);
+			routePostion.z);
 
 		Vector3 rayDirection = Vector3.down * rayOriginHeight * 2;
 		Ray ray = new Ray (rayOrigin, rayDirection);
@@ -109,12 +124,12 @@ public class StravaSpheres : MonoBehaviour
 			Vector3 hitPoint = hitPointList [0].point + new Vector3 (0, 0, 0);
 
 			Vector3 newPos = new Vector3 (
-				spawnedObject.transform.position.x, 
+				routePostion.x, 
 				hitPoint.y, 
-				spawnedObject.transform.position.z);
+				routePostion.z);
 
 			// Apply elevation
-			spawnedObject.transform.position = newPos;
+//			spawnedObject.transform.position = newPos;
 
 //				Debug.DrawLine(newPos, new Vector3(newPos.x, newPos.y + 0.05f, newPos.z), Color.cyan);
 			DrawLine(new Vector3(newPos.x, newPos.y + 0.04f, newPos.z), newPos, Color.cyan);
@@ -146,22 +161,31 @@ public class StravaSpheres : MonoBehaviour
 
 		_locations = new Vector2d[numberStravaCoords];
 		_spawnedObjects = new List<GameObject>();
+		positions = new Vector3[numberStravaCoords];
 
 		for (int i = 0; i < numberStravaCoords; i++)
 		{
 			var locationString = "" + locations[i][0] + ", " + locations[i][1];
 			_locations[i] = Conversions.StringToLatLon(locationString);
-			var instance = Instantiate(_markerPrefab);
-			instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i]);
-			Debug.Log (instance.transform.localPosition);
-			instance.transform.localScale = Vector3.one * _spawnScale;
-			_spawnedObjects.Add(instance);
+			Vector3 worldPosition = _map.GeoToWorldPosition(_locations[i]);
+
+			if (drawSpheres == true) {
+				var instance = Instantiate (_markerPrefab);
+				instance.transform.localPosition = worldPosition;
+				Debug.Log (instance.transform.localPosition);
+				instance.transform.localScale = Vector3.one * _spawnScale;
+				_spawnedObjects.Add (instance);
+			} else {
+				positions [i] = worldPosition;
+			}
 		}
+
 	}
 
 	public string GetStravaCoords(string user, string activity_id)
 	{
 		string url = "http://127.0.0.1:8010/activity?user=" + user + "&id=" + activity_id;
+//		string url = "http://b77c79a7.ngrok.io/activity?user=" + user + "&id=" + activity_id;
 		string activity_stream = Get (url);
 		Debug.Log (activity_stream);
 		return activity_stream;
