@@ -132,7 +132,7 @@ public class StravaSpheres : MonoBehaviour
 //			spawnedObject.transform.position = newPos;
 
 //				Debug.DrawLine(newPos, new Vector3(newPos.x, newPos.y + 0.05f, newPos.z), Color.cyan);
-			DrawLine(new Vector3(newPos.x, newPos.y + 0.04f, newPos.z), newPos, Color.cyan);
+			DrawLine(new Vector3(newPos.x, newPos.y + 0.03f, newPos.z), newPos, new Color(0f, 1f, 1f, 0.08f));
 		}
 
 	}
@@ -144,7 +144,9 @@ public class StravaSpheres : MonoBehaviour
 		myLine.AddComponent<LineRenderer>();
 		LineRenderer lr = myLine.GetComponent<LineRenderer>();
 		lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+
 		lr.SetColors(color, color);
+
 		lr.SetWidth(0.005f, 0.005f);
 		lr.SetPosition(0, start);
 		lr.SetPosition(1, end);
